@@ -26,6 +26,7 @@ public:
         cout << "\n X=" << xco << "\t Y=" << yco;
     }
 };
+
 class polar
 {
     float radius, angle;
