@@ -1,31 +1,37 @@
-#include <iostream>
-#include <string.h>
+/*
+Static data members are class members that are declared using static keywords.
+Only one copy of that member is created for the entire class
+    and is shared by all the objects of that class, no matter how many objects are created.
 
+A static member function can only access static data member,
+    other static member functions and any other functions from outside the class.
+
+
+*/
+
+#include <iostream>
 using namespace std;
-class A
+
+class student
 {
-    int roll;
-    char *name;
-    int marks;
-    static int batch;
+    static int count;
+    int number = 10;
 
 public:
-    A() {}
-    A(int x, char *y, int z)
+    student()
     {
-        roll = x;
-        strcpy(name, y);
-        marks = z;
+        count++;
+        number++;
     }
-    void display()
-    {
-        cout << "\n name=" << name << "\n roll=" << roll << "\n marks=" << marks;
-    }
+    void print() { cout << "Normal data member: " << number << endl; }
+    static void display() { cout << "Static data member " << count << endl; }
 };
-int A::batch = 2077;
+int student::count = 10;
 int main()
 {
-    A a(41, "santosh", 1);
-    a.display();
+    student s1, s2, s3, s4;
+    s4.print();
+
+    student::display();
     return 0;
 }
