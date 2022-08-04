@@ -31,7 +31,7 @@ public:
 int main()
 {
     Number x, y, z(10);
-    Number z1(z);
+    Number z1 = z;
     z.display();
     z1.display();
     return 0;

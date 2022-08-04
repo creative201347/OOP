@@ -18,6 +18,7 @@ int add(int a, int b, int c)
 {
     return a + b + c;
 }
+
 int main()
 {
     cout << "Addition of 6 and 7 is: " << add(6, 7) << endl;

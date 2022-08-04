@@ -14,6 +14,3 @@ int main()
     cout << "Addition of two number is: " << c << endl;
     return 0;
 }
-
-
-// Inline functions
